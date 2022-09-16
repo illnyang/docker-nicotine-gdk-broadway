@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+  nicotine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nicotine
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - .\downloads:/nicotine/downloads
+      - .\music:/nicotine/music
+    ports:
+      - 8085:8085
+    restart: unless-stopped
