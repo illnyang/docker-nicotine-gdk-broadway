@@ -9,7 +9,7 @@ RUN addgroup -g ${PGID} -S ${GROUP} && \
     adduser -S -D -u ${PUID} -h /nicotine -G ${GROUP} -g nicotine ${USER} && \
     apk update && apk upgrade && \
     apk add --virtual build-dependencies py3-pip py3-setuptools && \
-    apk add bash supervisor ttf-dejavu adwaita-icon-theme dbus && \
+    apk add bash supervisor font-noto-all adwaita-icon-theme dbus && \
     apk add nicotine-plus --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
     pip install --upgrade setuptools && \
     pip install mutagen && \
