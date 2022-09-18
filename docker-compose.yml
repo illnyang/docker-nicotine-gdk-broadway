@@ -13,4 +13,10 @@ services:
       - .\music:/nicotine/music
     ports:
       - 8085:8085
+      - 2234:2234
+      - 2235:2235
+      - 2236:2236
+      - 2237:2237
+      - 2238:2238
+      - 2239:2239
     restart: unless-stopped
